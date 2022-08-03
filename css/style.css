@@ -87,6 +87,7 @@ nav img {
   margin-left: 160px;
   font-size: 28px;
   padding: 20px 10px;
+  margin-right: 20px;
 }
 
 .main header {
@@ -107,11 +108,44 @@ nav img {
   color: white;
 }
 
-.main section.trending .content {
+.row {
+  width: 100% !important;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+
+
+}
+
+.row .col {
+  padding: 20px 10px;
+}
+
+.flex {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row .col .rating img {
+  width: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.row .col a h5 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.row .col p {
+  font-size: 15px;
+  font-weight: 300;
 }
 
 .main img {
-  width: 150px;
+  width: 100%;
 }
