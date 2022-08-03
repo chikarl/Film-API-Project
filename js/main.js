@@ -5,13 +5,19 @@ fetch(apiRe)
   .then(response => response.json())
   .then(data => {
     let trendingData = data.results
-    // console.log(trendingData[0]);
+    console.log(trendingData[0])
     let movieData = trendingData.map(elem => {
       // console.log(con);
-      return `<div>
+      return `<div class="col">
                     <img src="https://image.tmdb.org/t/p/w500/${elem.poster_path}" alt="">
-                    <h5 class="title">${elem.original_title}</h5>
-                    <h6 class="date">${elem.release_date}</h6>
+                    <a href="https://api.themoviedb.org/3/movie/${elem.id}?api_key=cc52d7bc957397a1680d0fc49c0a4492&language=en-US">
+                    <h5 class="title">${elem.original_title}</h5></a>
+                    <div class="flex">
+                    <p class="date">${elem.release_date}</p>
+                    <div class="rating">
+                      <p> <img src="../image/heart.svg"> <span>${elem.vote_average}<span></p>
+                    </div>
+                    </div>
                     </div>
                     `
     }).join('')
