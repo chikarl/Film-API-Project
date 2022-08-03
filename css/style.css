@@ -108,12 +108,14 @@ nav img {
   color: white;
 }
 
+section {
+  margin: 20px 0;
+}
+
 .row {
   width: 100% !important;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
-
-
 }
 
 .row .col {
